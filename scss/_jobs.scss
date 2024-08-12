@@ -1,0 +1,89 @@
+.post-type-archive-jobs {
+    .blue-bar {
+        background:#652d91;
+        display: flex;
+        justify-content: center;
+        margin-top:40px;
+        input {
+            width: 500px;
+            padding: 20px;
+            margin-bottom: -10px;
+            border-radius: 10px;
+            border: 1px solid #CCC;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            margin-top:40px;
+        }
+        button {
+            background: #cf167c;
+            color: #FFF;
+            height: 58px;
+            margin-left: -1px;
+            position: absolute;
+            padding: 20px;
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-top: 40px;
+        }
+    }
+    .main {
+        > .row {
+            margin-top:60px;
+            h3 {
+                font-size: 23px;
+                margin-bottom: 20px;
+            }
+            .col-9 {
+                overflow:hidden;
+                a {
+                    display: block;
+                    .top {
+                        .avatar {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100%;
+                            background-size: contain;
+                        }
+                        p {
+                            margin-left:10px;
+                            margin-top:20px;
+                            font-size:14px;
+                        }
+                    }
+                    .middle {
+                        h2 {
+                            margin-top: 19px;
+    
+                        }
+                        p {
+                            line-height: 20px;
+                        }
+                    }
+
+                    .bottom {
+                        margin-top:30px;
+                        border-top:1px solid #000;
+                        padding-top:10px;
+                        gap:20px;
+                        p {
+                            font-size:12px;
+                        }
+                    }
+                  
+                }
+            }
+            .col-3 {
+             
+                a {
+                    display:block;
+                    font-size:18px;
+                    padding: 10px 20px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+  
+}

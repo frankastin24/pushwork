@@ -1,0 +1,156 @@
+footer {
+  padding: 50px 0 0px 0;
+  .logo {
+    padding: 0 30px;
+    width: 154px;
+    &:first-child {
+      border-right: 2px solid #da141b;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    li a,
+    li {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  .has-text-align-center {
+    ul {
+      margin-top: 60px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  #footer-nav {
+    margin-top: 60px;
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      li {
+        a {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  #footer-copy {
+    background-color: #e0151d;
+    margin-top: 40px;
+
+    a,
+    span {
+      padding: 10px;
+      display: inline-block;
+      color: #fff;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    .footer-bottom-nav {
+      a {
+        margin-left: 20px;
+      }
+    }
+    .virtus {
+      padding-top: 12px;
+    }
+  }
+}
+.cookie-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+
+  width: 400px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1%;
+  border: 1px solid #242f35;
+  overflow-y: auto;
+  p {
+    color: #242f35;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+  }
+  a {
+    display: block;
+    color: #242f35;
+    font-size: 14px;
+    &:hover {
+      color: #fff;
+      background-color: #ed1c24;
+      border-color: #ed1c24;
+    }
+  }
+  .vise-cookies {
+    display: inline-block;
+    padding: 11px 10px;
+    color: #242f35;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 7px 0px;
+  }
+  .btn {
+    padding: 10px 30px;
+    border: 1px solid #242f35;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .footer-social {
+    padding: 50px 0px;
+  }
+  .logo-slider {
+    img {
+      width: 120px;
+    }
+  }
+  footer {
+    #footer-text {
+      flex-direction: column;
+      text-align: center;
+      .col-3 {
+        width: 100%;
+        margin-top: 60px;
+        a {
+          &.red-arrow-link {
+            &:before {
+              left: auto;
+              margin-left: -30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    span {
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .footer-social {
+    padding: 50px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+}

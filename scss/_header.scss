@@ -1,0 +1,91 @@
+#main-header {
+
+  width: 100%;
+  align-items: center;
+  padding-bottom: 20px;
+
+  .logo {
+    width: 180px;
+    margin-top: 10px;
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  #header-navigation {
+    padding-top: 10px;
+
+    .dropdown {
+      position: absolute;
+      width: 200px;
+      margin-left: -156px;
+      background:#FFF;
+      border-top:1px solid #000;
+      display:none;
+      a {
+        display:block;
+        border-bottom:1px solid #000;
+        color:#000;
+        text-align: left;
+        padding:10px 5px;
+      }
+
+    }
+
+    .bell {
+      display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-image: url(../img/bell.svg);
+    margin-top: 16px;
+    cursor: pointer;
+    }
+
+    .message {
+      display: block;
+      width: 26px;
+      height: 26px;
+      background-size: contain;
+      background-image: url(../img/message.svg);
+      margin-top: 14px;
+      margin-left: 15px;
+      cursor: pointer;
+
+    }
+
+    .user {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+      background-image: url(../img/user.svg);
+      margin-top: 11px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .btn {
+    background: var(--pink);
+    color: #FFF;
+    padding: 11px 17px;
+    border-radius: 10px;
+    margin-right: 32px;
+    height: 41px;
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  #mobile-menu-trigger {
+    display: none;
+  }
+
+  
+  
+
+}
+
+@media only screen and (max-width: 1000px) {}

@@ -1,0 +1,60 @@
+#job_skills {
+    display: none;
+    h1 {
+      width: 80%;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+
+    .add_skill {
+      background: #cf167c;
+      color: #fff;
+      padding: 12px 13px;
+      border-radius: 10px;
+      display: block;
+      margin-top: 10px;
+      height: 39px;
+      margin-left: 10px;
+    }
+    .skills_dropdown {
+      position: absolute;
+      background: #fff;
+      width: 15.7%;
+      margin-top: -14px;
+      li {
+        padding: 11px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        &:hover {
+          background: #ccc;
+        }
+        &:first-child {
+          border-top: 1px solid #ccc;
+        }
+        &.selected {
+          background: #cf167c;
+          color: #fff;
+          border-radius: 5px;
+        }
+      }
+    }
+    .selected_skills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      min-height: 100px;
+      li {
+        background: #cf167c;
+        color: #fff;
+        padding: 9px 13px;
+        border-radius: 10px;
+        height: 35px;
+
+        .delete-skill {
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }

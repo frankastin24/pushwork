@@ -1,0 +1,274 @@
+.register-freelancer {
+  .container {
+    padding: 0px 10px;
+    h1 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 11px;
+    }
+
+    .field {
+      .error-text {
+        display: none;
+        color: red;
+        margin-top: -10px;
+      }
+
+      &.error {
+        .drop_zone {
+          border: red 2px dashed;
+        }
+        input,
+        textarea {
+          border: red 1px solid;
+        }
+        .error-text {
+          display: block;
+        }
+      }
+    }
+    h4 {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 7px;
+      color: #6e6e6e;
+      text-transform: uppercase;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #b1b1b1;
+      border-radius: 4px;
+    }
+    textarea {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #b1b1b1;
+      border-radius: 4px;
+      height: 100px;
+    }
+
+    .pound {
+      border: 1px solid #b1b1b1;
+      border-radius: 4px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      height: 29px;
+      padding: 6px 10px;
+      border-right: none;
+    }
+
+    input[type="number"] {
+      width: 100px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    .drop_zone {
+      border: 2px dashed #ccc;
+      width: 50%;
+      height: 100px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 17px;
+      }
+    }
+    #profile_pic_preview,
+    #id_image_preview {
+      height: 100px;
+      margin-left: 20px;
+    }
+
+    .skills_dropdown {
+      position: absolute;
+      width: calc(100% - 20px);
+
+      margin-top: -20px;
+      background: #fff;
+      li {
+        padding: 7px;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        &:last-child {
+          border-bottom: 1px solid #ccc;
+        }
+        &.selected {
+          background: #cf167c;
+          color: #fff;
+        }
+      }
+    }
+    .selected_skills {
+      min-height: 20px;
+      margin-bottom: 20px;
+      margin-top: -10px;
+
+      li {
+        font-size: 13px;
+        color: #fff;
+        padding: 5px;
+        background: #cf167c;
+        display: inline-flex !important;
+        gap: 10px;
+        border-radius: 4px;
+        margin-right: 4px;
+      }
+    }
+    button {
+      background: #cf167c;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+      padding: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  }
+}
+
+.account-created {
+  text-align: center;
+  h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.login {
+  text-align: center;
+  h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 40px;
+    a {
+      color: #cf167c;
+      &:last-child {
+        color: #71208c;
+      }
+    }
+  }
+  .field {
+    text-align: left;
+    width: 300px;
+    margin: auto;
+    h4 {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 7px;
+      color: #6e6e6e;
+      text-transform: uppercase;
+    }
+    input {
+      width: 100%;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border: 1px solid #b1b1b1;
+      border-radius: 4px;
+      background: #fff;
+    }
+    .error-text {
+      display: none;
+      color: red;
+    }
+
+    &.error {
+      .error-text {
+        display: block;
+        margin-bottom: 20px;
+        margin-top: -10px;
+      }
+    }
+  }
+  .container {
+    form {
+      > a {
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+
+  button {
+    background: #cf167c;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 300px;
+  }
+}
+
+.buyer-register {
+  h1 {
+    margin-top:20px;
+    text-align: center;
+    width:100%;
+  }
+  .field {
+    text-align: left;
+    width: 300px;
+    margin: auto;
+    h4 {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 7px;
+      color: #6e6e6e;
+      text-transform: uppercase;
+    }
+    input {
+      width: 100%;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border: 1px solid #b1b1b1;
+      border-radius: 4px;
+      background: #fff;
+      margin-top:0px !important;
+    }
+    .error-text {
+      display: none;
+      color: red;
+    }
+
+    &.error {
+      .error-text {
+        display: block;
+        margin-bottom: 20px;
+        margin-top: -10px;
+      }
+    }
+  }
+  button {
+    background: #cf167c;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 300px;
+    margin:auto;
+    display: block;
+
+  }
+}
