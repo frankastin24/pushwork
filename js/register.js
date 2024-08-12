@@ -145,49 +145,11 @@ jQuery(($) => {
      
     
     })
-  let isSkillsDropdown = false;
-
-  const selectedSkills = [];
-
-  const addSkillsHTML = () => {
-    var html = "";
-
-    selectedSkills.forEach((skill) => {
-      html += `<li class="selected-skill row">${skill} <div class="delete-skill">X</div></li>`;
-    });
 
   
-        
-   $(".selected_skills").parent().removeClass('error')
-       
- 
-
-    $(".selected_skills").html(html);
-  }
-
-  $(".selected_skills").on("click", ".delete-skill", (e) => {
-    const index = $(e.currentTarget).parent().index();
-
-    selectedSkills.splice(index, 1);
-
-    addSkillsHTML();
-  });
-
-  $(".skills_dropdown").on("click", "li", (e) => {
-    selectedSkills.push($(e.currentTarget).html());
-
-    addSkillsHTML();
-    $(".skills_dropdown").html("");
-    $('input[name="add_skill"]').val("");
-  });
+  
 
 
-  $(".add_skill").on("click", () => {
-    selectedSkills.push($('input[name="add_skill"]').val());
-
-    addSkillsHTML();
-    $('input[name="skills"]').val("");
-  });
 
 
 
@@ -274,7 +236,10 @@ jQuery(($) => {
           html += `<li class="skill ${
             index == 0 ? "selected" : ""
           }">${skill}</li>`;
+         
         });
+        $('.skills_dropdown').show();
+        console.log($('.skills_dropdown'))
       } else {
         isSkillsDropdown = false;
       }
@@ -283,9 +248,12 @@ jQuery(($) => {
       return;
     } else {
       $(".skills_dropdown").html("");
+
     }
     isSkillsDropdown = false;
   });
+
+
   const validateEmail = (email) => {
     return String(email)
       .toLowerCase()

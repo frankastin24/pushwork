@@ -66,21 +66,13 @@ get_header();
     <h4>Skills</h4>
 
     <script>
-        const skills = [<?php
-
-                    
-                        foreach ($skills as $index => $post) {
-                            echo '"' . $post->post_title .  '"' . ($index ==  $num_skills ? '' : ',');
-                        }
-
-
-                        ?>];
+        const skills = [<?= get_skills();?>];
     </script>
+
     <div class="field">
         <input placeholder="Enter skills" type="text" name="skills" />
         <p class="error-text">You must select at least one skill</p>
         <ul class="skills_dropdown"></ul>
-
         <ul class="selected_skills"></ul>
     </div>
 

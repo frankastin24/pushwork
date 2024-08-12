@@ -43,6 +43,10 @@ h1 {
   font-weight: 500;
 }
 
+li {
+  list-style: none;
+}
+
 @media only screen and (max-width: 1400px) {
   .container {
     padding:0px 20px;

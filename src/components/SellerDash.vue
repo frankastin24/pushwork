@@ -19,7 +19,7 @@
             <h6>{{message.author}}</h6>
             <p>{{message.snippet}}</p>
        </li>
-       </ul>
+    </ul>
 </div>
 
 </template>

@@ -33,6 +33,8 @@ if(isset($_GET['logout'])) {
     exit;
 }
 
+
+
 if(isset($_POST['is_login'])) {
 
     
@@ -104,6 +106,20 @@ function pushwork_setup()
     register_nav_menus($menus);
 }
 
+function get_skills() {
+
+    $skills_query = new WP_Query(['post_type' => 'skills' , 'posts_per_page' => -1]);
+   
+    $skills = [];
+
+    foreach ($skills_query->posts as $index => $post) {
+       array_push($skills,['title'=>$post->post_title, 'id' => $post->ID]);  
+       
+    }
+
+    return $skills;
+}
+
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 function enqueue_scripts()
@@ -113,24 +129,19 @@ function enqueue_scripts()
     wp_enqueue_style('google-font-asap', 'https://fonts.googleapis.com/css2?family=Asap:wght@200;300;400;500;600;700;800&display=swap', [], '2.2');
     wp_enqueue_style('google-font-marcellus', 'https://fonts.googleapis.com/css2?family=Marcellus&display=swap', [], '2.2');
     
-    
     wp_enqueue_style('main-style', TEMPLATE_URI . '/scss/index.css', [], time());
-
-    wp_enqueue_style('slick-style', TEMPLATE_URI . '/scss/slick.css', [], time());
-    wp_enqueue_style('slick-theme-style', TEMPLATE_URI . '/scss/slick-theme.css', [], time());
-
 
     wp_enqueue_script('jquery');
 
-    wp_enqueue_script('slick', TEMPLATE_URI . '/js/slick.js', ['jquery'], time(), true);
+    wp_register_script('main-script', TEMPLATE_URI . '/js/main-script.js');
+    
+    $skills = get_skills();
+    
+    $object = ['skills' => $skills];
 
-    wp_enqueue_script('post-job', TEMPLATE_URI . '/js/post-job.js', ['jquery'], time(), true);
- 
-    wp_enqueue_script('messages', TEMPLATE_URI . '/js/messages.js', ['jquery'], time(), true);
-   
-    wp_enqueue_script('register', TEMPLATE_URI . '/js/register.js', ['jquery'], time(), true);
-   
-    wp_enqueue_script('theme-script', TEMPLATE_URI . '/js/script.js', ['jquery'], time(), true);
+    wp_localize_script( 'main-script', 'Pushwork', $object );
+
+    wp_enqueue_script( 'main-script');
 }
 
 add_action('admin_enqueue_scripts', 'enqueue_admin_script');
